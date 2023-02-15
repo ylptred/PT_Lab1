@@ -1,0 +1,12 @@
+[debug] > Exec(compile; run, None, None)
+[debug] > Exec(compile, None, None)
+[debug] Evaluating tasks: Compile / compile
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\ЖаваБИ\untitled\target\scala-2.13\classes ...
+[info] done compiling
+[success] Total time: 1 s, completed 14 февр. 2023 г., 19:44:04
+[debug] > Exec(run, None, None)
+[debug] Evaluating tasks: Compile / run
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[success] Total time: 1 s, completed 14 февр. 2023 г., 19:44:05
+[debug] > Exec(idea-shell, None, None)

@@ -1,0 +1,7 @@
+[debug] > Exec(all {file:/D:/untitled/}root/products {file:/D:/untitled/}root/test:products, None, None)
+[error] Expected project ID
+[error] all {file:/D:/untitled/}root/products {file:/D:/untitled/}root/test:products
+[error]                             ^
+[debug] > Exec(idea-shell, None, None)
+[debug] > Exec(, None, None)
+[debug] > Exec(idea-shell, None, None)

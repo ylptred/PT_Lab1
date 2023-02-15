@@ -1,0 +1,48 @@
+[debug] > Exec(compile; run, None, None)
+[debug] > Exec(compile, None, None)
+[debug] Evaluating tasks: Compile / compile
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Forcing garbage collection...
+[success] Total time: 1 s, completed 14 февр. 2023 г., 19:43:36
+[debug] > Exec(run, None, None)
+[debug] Evaluating tasks: Compile / run
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[error] java.lang.NullPointerException: in is null
+[error] 	at java.base/java.util.zip.ZipInputStream.<init>(ZipInputStream.java:104)
+[error] 	at java.base/java.util.zip.ZipInputStream.<init>(ZipInputStream.java:83)
+[error] 	at org.apache.poi.openxml4j.opc.ZipPackage.<init>(ZipPackage.java:83)
+[error] 	at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:267)
+[error] 	at org.apache.poi.util.PackageHelper.open(PackageHelper.java:39)
+[error] 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:204)
+[error] 	at utils.data.ReportTemplateWriter$.delayedEndpoint$utils$data$ReportTemplateWriter$1(ReportTemplateWriter.scala:20)
+[error] 	at utils.data.ReportTemplateWriter$delayedInit$body.apply(ReportTemplateWriter.scala:7)
+[error] 	at scala.Function0.apply$mcV$sp(Function0.scala:42)
+[error] 	at scala.Function0.apply$mcV$sp$(Function0.scala:42)
+[error] 	at scala.runtime.AbstractFunction0.apply$mcV$sp(AbstractFunction0.scala:17)
+[error] 	at scala.App.$anonfun$main$1(App.scala:98)
+[error] 	at scala.App.$anonfun$main$1$adapted(App.scala:98)
+[error] 	at scala.collection.IterableOnceOps.foreach(IterableOnce.scala:575)
+[error] 	at scala.collection.IterableOnceOps.foreach$(IterableOnce.scala:573)
+[error] 	at scala.collection.AbstractIterable.foreach(Iterable.scala:933)
+[error] 	at scala.App.main(App.scala:98)
+[error] 	at scala.App.main$(App.scala:96)
+[error] 	at utils.data.ReportTemplateWriter$.main(ReportTemplateWriter.scala:7)
+[error] 	at utils.data.ReportTemplateWriter.main(ReportTemplateWriter.scala)
+[error] 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+[error] 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+[error] 	at sbt.Run.invokeMain(Run.scala:143)
+[error] 	at sbt.Run.execute$1(Run.scala:93)
+[error] 	at sbt.Run.$anonfun$runWithLoader$5(Run.scala:120)
+[error] 	at sbt.Run$.executeSuccess(Run.scala:186)
+[error] 	at sbt.Run.runWithLoader(Run.scala:120)
+[error] 	at sbt.Defaults$.$anonfun$bgRunTask$6(Defaults.scala:1983)
+[error] 	at sbt.Defaults$.$anonfun$termWrapper$2(Defaults.scala:1922)
+[error] 	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+[error] 	at scala.util.Try$.apply(Try.scala:213)
+[error] 	at sbt.internal.BackgroundThreadPool$BackgroundRunnable.run(DefaultBackgroundJobService.scala:369)
+[error] 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+[error] 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+[error] 	at java.base/java.lang.Thread.run(Thread.java:1589)
+[error] (Compile / run) java.lang.NullPointerException: in is null
+[error] Total time: 0 s, completed 14 февр. 2023 г., 19:43:37
+[debug] > Exec(idea-shell, None, None)

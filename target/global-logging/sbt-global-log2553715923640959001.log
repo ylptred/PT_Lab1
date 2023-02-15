@@ -1,0 +1,13 @@
+[debug] > Exec(compile, None, None)
+[debug] Evaluating tasks: Compile / compile
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\ЖаваБИ\untitled\target\scala-2.13\classes ...
+[warn] D:\ЖаваБИ\untitled\src\main\scala\utils\data\MakeCSV.scala:25:36: Auto-application to `()` is deprecated. Supply the empty argument list `()` explicitly to invoke method getLines,
+[warn] or remove the empty argument list from its definition (Java-defined methods are exempt).
+[warn] In Scala 3, an unapplied method like this will be eta-expanded into a function.
+[warn]       for (line <- services_source.getLines.drop(1)) {
+[warn]                                    ^
+[warn] one warning found
+[info] done compiling
+[success] Total time: 7 s, completed 15 февр. 2023 г., 13:48:56
+[debug] > Exec(idea-shell, None, None)

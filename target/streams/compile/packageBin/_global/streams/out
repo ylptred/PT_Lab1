@@ -1,0 +1,21 @@
+[debug] Packaging D:\ЖаваБИ\untitled\target\scala-2.13\untitled_2.13-0.1.0-SNAPSHOT.jar ...
+[debug] Input file mappings:
+[debug] 	100.csv
+[debug] 	  D:\ЖаваБИ\untitled\target\scala-2.13\classes\100.csv
+[debug] 	15.csv
+[debug] 	  D:\ЖаваБИ\untitled\target\scala-2.13\classes\15.csv
+[debug] 	data.csv
+[debug] 	  D:\ЖаваБИ\untitled\target\scala-2.13\classes\data.csv
+[debug] 	services.csv
+[debug] 	  D:\ЖаваБИ\untitled\target\scala-2.13\classes\services.csv
+[debug] 	utils
+[debug] 	  D:\ЖаваБИ\untitled\target\scala-2.13\classes\utils
+[debug] 	utils\data
+[debug] 	  D:\ЖаваБИ\untitled\target\scala-2.13\classes\utils\data
+[debug] 	utils\data\MakeCSV$.class
+[debug] 	  D:\ЖаваБИ\untitled\target\scala-2.13\classes\utils\data\MakeCSV$.class
+[debug] 	utils\data\MakeCSV$delayedInit$body.class
+[debug] 	  D:\ЖаваБИ\untitled\target\scala-2.13\classes\utils\data\MakeCSV$delayedInit$body.class
+[debug] 	utils\data\MakeCSV.class
+[debug] 	  D:\ЖаваБИ\untitled\target\scala-2.13\classes\utils\data\MakeCSV.class
+[debug] Done packaging.
