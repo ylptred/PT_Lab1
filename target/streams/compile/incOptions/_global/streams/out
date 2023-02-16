@@ -1,2 +1,16 @@
-[debug] Created transactional ClassFileManager with tempDir = D:\ЖаваБИ\untitled\target\scala-2.13\classes.bak
-[debug] Removing the temporary directory used for backing up class files: D:\ЖаваБИ\untitled\target\scala-2.13\classes.bak
+[debug] Created transactional ClassFileManager with tempDir = D:\ЖаваБИ\PT_Lab1\target\scala-2.13\classes.bak
+[debug] About to delete class files:
+[debug] 	MakeCSV$.class
+[debug] 	MakeCSV$delayedInit$body.class
+[debug] 	MakeCSV.class
+[debug] We backup class files:
+[debug] 	MakeCSV$.class
+[debug] 	MakeCSV$delayedInit$body.class
+[debug] 	MakeCSV.class
+[debug] Rolling back changes to class files.
+[debug] Removing generated classes:
+[debug] Restoring class files: 
+[debug] 	MakeCSV$delayedInit$body.class
+[debug] 	MakeCSV$.class
+[debug] 	MakeCSV.class
+[debug] Removing the temporary directory used for backing up class files: D:\ЖаваБИ\PT_Lab1\target\scala-2.13\classes.bak

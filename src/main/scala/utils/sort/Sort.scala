@@ -34,49 +34,25 @@ object Sort {
   }
 
   def shaker_sort(arr: Array[Data]): Array[Data] = {
-    var swapped = true
-    var start = 0
-    var end = a.length
+    var swapped = false
+    do {
+      def swap(i: Int): Unit = {
+        val temp = arr(i)
+        arr(i) = arr(i + 1)
+        arr(i + 1) = temp
+        swapped = true
+      }
 
-    while ( {
-      swapped == true
-    }) { // reset the swapped flag on entering the
-      // loop, because it might be true from a
-      // previous iteration.
       swapped = false
-      // loop from bottom to top same as
-      // the bubble sort
-      for (i <- start until end - 1) {
-        if (a(i) > a(i + 1)) {
-          val temp = a(i)
-          a(i) = a(i + 1)
-          a(i + 1) = temp
-          swapped = true
-        }
+      for (i <- 0 to (arr.length - 2)) if (arr(i) > arr(i + 1)) swap(i)
+
+      if (swapped) {
+        swapped = false
+        for (j <- arr.length - 2 to 0 by -1) if (arr(j) > arr(j + 1)) swap(j)
+        //if no elements have been swapped, then the list is sorted
       }
-      // if nothing moved, then array is sorted.
-      if (swapped == false) break //todo: break is not supported
-      // otherwise, reset the swapped flag so that it
-      // can be used in the next stage
-      swapped = false
-      // move the end point back by one, because
-      // item at the end is in its rightful spot
-      end = end - 1
-      // from top to bottom, doing the
-      // same comparison as in the previous stage
-      for (i <- end - 1 to start by -1) {
-        if (a(i) > a(i + 1)) {
-          val temp = a(i)
-          a(i) = a(i + 1)
-          a(i + 1) = temp
-          swapped = true
-        }
-      }
-      // increase the starting point, because
-      // the last stage would have moved the next
-      // smallest number to its rightful spot.
-      start = start + 1
-    }
+    } while (swapped)
+    arr
   }
 
 }
