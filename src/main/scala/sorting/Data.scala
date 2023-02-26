@@ -1,6 +1,11 @@
 package sorting
 
-class Data(serviceName: String = "", price: Int = 0, deadline: Int = 0, subprice: Int = 0)  {
+trait Data {
+
+  val serviceName: String
+  val price: String
+  val deadline: String
+  val subprice: String
 
   def <(that: Data): Boolean = {
     if (this.serviceName < that.serviceName) {
@@ -40,5 +45,6 @@ class Data(serviceName: String = "", price: Int = 0, deadline: Int = 0, subprice
   def >=(that: Data): Boolean = {
     !(this < that)
   }
-
 }
+
+class DataClass(val serviceName: String, val price: String, val deadline: String, val subprice: String) extends Data

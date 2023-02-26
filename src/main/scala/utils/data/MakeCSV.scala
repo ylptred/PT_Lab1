@@ -17,12 +17,12 @@ object MakeCSV {
       val csvWriter: CSVWriter = new CSVWriter(outputFile)
       val csvFields: Array[String] = Array[String]("Название Услуги", "Ориентировочная Стоимость", "Срок Исполнения",
         "Размер Предоплаты")
-      var servicesListTMP: Array[String] = Array[String]()
+      var servicesListTMP: Array[String] = Array.empty[String]
       val services_source: BufferedSource = io.Source.fromFile("src/main/resources/services.csv")
       for (line <- services_source.getLines.drop(1)) {
         servicesListTMP = servicesListTMP :+ line
       }
-      var servicesList: Array[String] = Array[String]()
+      var servicesList: Array[String] = Array.empty[String]
       val counter: Int = select.toInt / servicesListTMP.length
       val diff: Int = select.toInt - (counter * servicesListTMP.length)
       for (_ <- 1 to counter) {
@@ -34,27 +34,29 @@ object MakeCSV {
         servicesList = servicesList :+ servicesListTMP(num)
       }
       services_source.close
-      var prices: Array[String] = Array[String]()
+      var prices: Array[Int] = Array.empty[Int]
       for (_ <- 1 to select.toInt) {
-        val value: String = Random.between(100000, 10000000).toString
+        val value: Int = Random.between(100000, 10000000)
         prices = prices :+ value
       }
-      var subprices: Array[String] = Array[String]()
+      var subprices: Array[Int] = Array.empty[Int]
       for (num <- prices) {
         val value: Int = num.toInt / Random.between(2, 4)
-        subprices = subprices :+ value.toString
+        subprices = subprices :+ value
       }
-      var deadlines: Array[String] = Array[String]()
+      var deadlines: Array[Int] = Array.empty[Int]
       for (_ <- 1 to select.toInt) {
-        deadlines = deadlines :+ Random.between(14, 365).toString
+        deadlines = deadlines :+ Random.between(14, 365)
       }
       var listOfRecords = new ListBuffer[Array[String]]()
       listOfRecords += csvFields
       for (i <- 0 until select.toInt) {
-        listOfRecords += Array(servicesList(i), prices(i), deadlines(i), subprices(i))
+        listOfRecords += Array(servicesList(i), prices(i).toString, deadlines(i).toString, subprices(i).toString)
       }
       csvWriter.writeAll(listOfRecords.toList.asJava)
       outputFile.close()
+
+      println(s"[DONE]: selection $select")
     }
   }
 }
