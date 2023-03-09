@@ -30,15 +30,17 @@ object Main {
     var time_shaker_arr: Map[String, String] = Map.empty[String, String]
 
     val selections: Array[String] = Array[String]("100", "500", "1000", "2500", "5000", "10000", "25000", "50000", "100000")
-    var data_arr: Array[Data] = Array[Data]()
 
     utils.data.MakeCSV.generateData(selections)
 
     for (selection <- selections) {
+      var data_arr: Array[Data] = Array.empty[Data]
       val data_source: BufferedSource = io.Source.fromFile(s"src/main/resources/$selection.csv")
       for (line <- data_source.getLines.drop(1)) {
         val splittedLine: Array[String] = line.split(",")
-        val DataObject: Data = new DataClass(splittedLine(0), splittedLine(1), splittedLine(2), splittedLine(3))
+        val DataObject: Data = new DataClass(splittedLine(0), splittedLine(1).drop(1).dropRight(1).toInt,
+          splittedLine(2).drop(1).dropRight(1).toInt,
+          splittedLine(3).drop(1).dropRight(1).toInt)
         data_arr = data_arr :+ DataObject
       }
       data_source.close
@@ -51,16 +53,19 @@ object Main {
       val csvWriter3: CSVWriter = new CSVWriter(outputFile3)
 
 
+      println(data_arr.length)
+
       val starttime_bubble = System.currentTimeMillis()
       val bubble_arr: Array[Data] = utils.sort.Sort.bubble_sort(data_arr)
       val endtime_bubble = System.currentTimeMillis()
+      println(bubble_arr.length)
       val time_bubble: String = (endtime_bubble - starttime_bubble).toString
       time_bubble_arr += (selection -> s"$time_bubble ms")
 
-
+      println(" ")
       var bubble = new ListBuffer[Array[String]]
       for (elem <- bubble_arr) {
-        bubble += Array(elem.serviceName, elem.deadline, elem.price, elem.subprice)
+        bubble += Array(elem.serviceName, elem.deadline.toString, elem.price.toString, elem.subprice.toString)
       }
       csvWriter1.writeAll(bubble.toList.asJava)
 
@@ -74,7 +79,7 @@ object Main {
 
       var insertion = new ListBuffer[Array[String]]
       for (elem <- insertion_arr) {
-        insertion += Array(elem.serviceName, elem.deadline, elem.price, elem.subprice)
+        insertion += Array(elem.serviceName, elem.deadline.toString, elem.price.toString, elem.subprice.toString)
       }
       csvWriter2.writeAll(insertion.toList.asJava)
 
@@ -88,7 +93,7 @@ object Main {
 
       var shaker = new ListBuffer[Array[String]]
       for (elem <- shaker_arr) {
-        shaker += Array(elem.serviceName, elem.deadline, elem.price, elem.subprice)
+        shaker += Array(elem.serviceName, elem.deadline.toString, elem.price.toString, elem.subprice.toString)
       }
       csvWriter3.writeAll(shaker.toList.asJava)
     }

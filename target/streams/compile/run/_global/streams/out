@@ -1,17 +1,17 @@
-[error] java.lang.NumberFormatException: For input string: ""3354122""
+[error] java.lang.NumberFormatException: For input string: ""7563254""
 [error] 	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
 [error] 	at java.base/java.lang.Integer.parseInt(Integer.java:651)
 [error] 	at java.base/java.lang.Integer.parseInt(Integer.java:781)
 [error] 	at scala.collection.StringOps$.toInt$extension(StringOps.scala:908)
-[error] 	at sorting.Main$.$anonfun$main$2(Main.scala:29)
-[error] 	at sorting.Main$.$anonfun$main$2$adapted(Main.scala:27)
+[error] 	at sorting.Main$.$anonfun$main$2(Main.scala:41)
+[error] 	at sorting.Main$.$anonfun$main$2$adapted(Main.scala:39)
 [error] 	at scala.collection.IterableOnceOps.foreach(IterableOnce.scala:575)
 [error] 	at scala.collection.IterableOnceOps.foreach$(IterableOnce.scala:573)
 [error] 	at scala.collection.AbstractIterator.foreach(Iterator.scala:1300)
-[error] 	at sorting.Main$.$anonfun$main$1(Main.scala:27)
-[error] 	at sorting.Main$.$anonfun$main$1$adapted(Main.scala:25)
+[error] 	at sorting.Main$.$anonfun$main$1(Main.scala:39)
+[error] 	at sorting.Main$.$anonfun$main$1$adapted(Main.scala:37)
 [error] 	at scala.collection.ArrayOps$.foreach$extension(ArrayOps.scala:1321)
-[error] 	at sorting.Main$.main(Main.scala:25)
+[error] 	at sorting.Main$.main(Main.scala:37)
 [error] 	at sorting.Main.main(Main.scala)
 [error] 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 [error] 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
@@ -28,4 +28,4 @@
 [error] 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
 [error] 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 [error] 	at java.base/java.lang.Thread.run(Thread.java:1589)
-[error] (Compile / run) java.lang.NumberFormatException: For input string: ""3354122""
+[error] (Compile / run) java.lang.NumberFormatException: For input string: ""7563254""

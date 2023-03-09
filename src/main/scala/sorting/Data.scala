@@ -3,9 +3,9 @@ package sorting
 trait Data {
 
   val serviceName: String
-  val price: String
-  val deadline: String
-  val subprice: String
+  val price: Int
+  val deadline: Int
+  val subprice: Int
 
   def <(that: Data): Boolean = {
     if (this.serviceName < that.serviceName) {
@@ -14,14 +14,8 @@ trait Data {
       if (this.price < that.price) {
         true
       } else if (this.price == that.price) {
-        if (this.deadline < that.deadline) {
+        if (this.subprice < that.subprice) {
           true
-        } else if (this.deadline == that.deadline) {
-          if (this.subprice < that.subprice) {
-            true
-          } else {
-            false
-          }
         } else {
           false
         }
@@ -34,8 +28,7 @@ trait Data {
   }
 
   def <=(that: Data): Boolean = {
-    (this < that) || (this.serviceName == that.serviceName && this.price == that.price &&
-      this.deadline == that.deadline && this.subprice == that.subprice)
+    (this < that) || (this.serviceName == that.serviceName && this.price == that.price && this.subprice == that.subprice)
   }
 
   def >(that: Data): Boolean = {
@@ -47,4 +40,4 @@ trait Data {
   }
 }
 
-class DataClass(val serviceName: String, val price: String, val deadline: String, val subprice: String) extends Data
+class DataClass(val serviceName: String, val price: Int, val deadline: Int, val subprice: Int) extends Data
