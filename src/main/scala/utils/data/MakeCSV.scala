@@ -10,6 +10,12 @@ import scala.io.BufferedSource
 
 object MakeCSV {
 
+  /**
+   * Метод генерации данных для сортировки
+   *
+   * @param selections: Array[String] - массив, содержащий объемы выборок данных, которые необходимо сгенерировать
+   * @return
+   */
   def generateData(selections: Array[String]): Unit = {
 
     for (select <- selections) {

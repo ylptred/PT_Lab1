@@ -4,6 +4,12 @@ import sorting.Data
 
 object Sort {
 
+  /**
+   * Метод сортировки пузырьком
+   *
+   * @param arr: Array[Data] - массив объектов типа Data
+   * @return
+   */
   def bubble_sort(arr: Array[Data]): Array[Data] = {
     for (i <- 0 until arr.length - 1; j <- 0 until arr.length - 1 - i) {
       if (arr(j) > arr(j + 1)) {
@@ -15,6 +21,12 @@ object Sort {
     arr
   }
 
+  /**
+   * Метод сортировки простыми вставками
+   *
+   * @param arr: Array[Data] - массив объектов типа Data
+   * @return
+   */
   def insertion_sort(arr: Array[Data]): Array[Data] = {
     for (i <- 1 until arr.length) {
       val item = arr(i)
@@ -28,6 +40,12 @@ object Sort {
     arr
   }
 
+  /**
+   * Метод шейкер сортировки
+   *
+   * @param arr: Array[Data] - массив объектов типа Data
+   * @return
+   */
   def shaker_sort(arr: Array[Data]): Array[Data] = {
     var swapped = false
     do {

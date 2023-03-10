@@ -14,15 +14,12 @@ import scala.io.BufferedSource
 
 object Main {
 
-  def printToFile(f: java.io.File)(op: java.io.PrintWriter => Unit): Unit = {
-    val p = new java.io.PrintWriter(f)
-    try {
-      op(p)
-    } finally {
-      p.close()
-    }
-  }
-
+  /**
+   * Главный метод программы, содержит вызовы всех вспомогательных функций и замер времени выполнения сортировок
+   *
+   * @param args
+   * @return
+   */
   def main(args: Array[String]): Unit = {
 
     var time_bubble_arr: Map[String, String] = Map.empty[String, String]
@@ -52,8 +49,6 @@ object Main {
       val csvWriter2: CSVWriter = new CSVWriter(outputFile2)
       val csvWriter3: CSVWriter = new CSVWriter(outputFile3)
 
-
-      println(data_arr.length)
 
       val starttime_bubble = System.currentTimeMillis()
       val bubble_arr: Array[Data] = utils.sort.Sort.bubble_sort(data_arr)
